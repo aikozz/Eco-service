@@ -5,6 +5,13 @@ function acc(){
 	
 }
 
+function connexion(){
+	require("./vue/inscription.php");
+	
+
+
+}
+
 
 
 ?>
