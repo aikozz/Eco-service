@@ -18,7 +18,7 @@
 </head>
 <body>
 <!-- Header -->
-<?php include('header.php'); ?>
+<?php require_once('./vue/header.php'); ?>
 <!-- Fin du Header -->
 
 <script>
@@ -64,12 +64,12 @@ function showInscription() {
             </form>
         </div>
         <div id="inscriptionForm" style = "display:none;" class="container w-100 col-12">
-            <form action="#" method="post">
+            <form action="./index.php/?controle=connexion&action=inscription" method="post">
                 <p>Nom  <br><input type="text" name="nom" /></p>
                 <p>Prénom <br><input type="text" name="prenom" /></p>
                 <p>Adresse <br><input type="text" name="adresse" /></p>
                 <p>Email <br><input type="text" name="email" /></p>
-                <p>Mot de passe  <br><input type="password" name="pass" /></p>
+                <p>Mot de passe  <br><input  name="mdp" type="password" /></p>
                 <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" /></p>
                 <p>N° Siret <br> <input type="text" name="siret" /></p>
 
@@ -85,7 +85,7 @@ function showInscription() {
 
 
 <!-- Footer -->
-<?php include('footer.php');?>
+<?php include('./vue/footer.php');?>
 
 <!-- JS -->
 <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
