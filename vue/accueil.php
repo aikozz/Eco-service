@@ -1,67 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <!-- Site meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Eco-Service</title>
-    <!-- CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
-    <link href="./vue/css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html" ><img src="./vue/img/Logo.png" width="100" ></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <i class="fa fa-navicon" style="color:#668B22; font-size:28px;"></i>
-            </span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-            <ul class="navbar-nav m-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="category.html">Catégories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Produits</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Panier</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=connexion&controle=Page">Inscription/connexion</a> <!--exemple pour les href -->
-                </li>
-
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <div class="input-group input-group-sm">
-                    <input type="text" class="form-control" placeholder="Recherche...">
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-secondary btn-number">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <a class="btn btn-success btn-sm ml-3" href="cart.html">
-                    <i class="fa fa-shopping-cart"></i> Panier
-                    <span class="badge badge-light">3</span>
-                </a>
-            </form>
-        </div>
-    </div>
-</nav>
+<!-- Header -->
+<?php require_once('./vue/header.php'); ?>
+<!-- Fin du Header -->
 
 
 <div class="taille">
