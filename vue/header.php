@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html" ><img src="./img/Logo.png" width="100" ></a>
+        <a class="navbar-brand" href="index.html" ><img src="./vue/img/Logo.png" width="100" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i class="fa fa-navicon" style="color:#668B22; font-size:28px;"></i>
@@ -26,9 +26,9 @@
 
             <div class="form-inline my-2 my-lg-0">
                 <div class="input-group input-group-sm">
-                    <a href="#" class ="iconnav" ><img title="search" alt="search" src="./img/icones/search.png" width="30px"></a> 
-                    <a href="#" class ="iconnav"><img title="panier" alt="panier" src="./img/icones/panier.png" width="30px"></a> 
-                    <a href="#" class ="iconnav"><img title="profil" alt="profil" src="./img/icones/profil.png" width="30px"></a> 
+                    <a href="#" class ="iconnav" ><img title="search" alt="search" src="./vue/img/icones/search.png" width="30px"></a> 
+                    <a href="#" class ="iconnav"><img title="panier" alt="panier" src="./vue/img/icones/panier.png" width="30px"></a> 
+                    <a href="#" class ="iconnav"><img title="profil" alt="profil" src="./vue/img/icones/profil.png" width="30px"></a> 
 
 
                 </div>

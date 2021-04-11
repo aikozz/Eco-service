@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 08 avr. 2021 à 23:02
+-- Généré le : dim. 11 avr. 2021 à 20:00
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 7.4.16
 
@@ -108,10 +108,18 @@ CREATE TABLE `user` (
   `email` text NOT NULL,
   `mdp` text NOT NULL,
   `adresse` text NOT NULL,
+  `prenom` varchar(255) NOT NULL,
   `nom` text NOT NULL,
-  `status` int(11) NOT NULL,
+  `statut` int(11) NOT NULL,
   `siret` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `mdp`, `adresse`, `prenom`, `nom`, `statut`, `siret`) VALUES
+(3, 'rezezrre@hotmail.com', 'bf5cc752ec79e865f373a52cccc2c0bbe0c5d6f3', '36 rue berezzerzaudin', 'rez', 'Bugarinrezre', 1, 'erzrze');
 
 --
 -- Index pour les tables déchargées
@@ -191,7 +199,7 @@ ALTER TABLE `commentaire`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Contraintes pour les tables déchargées
@@ -207,7 +215,8 @@ ALTER TABLE `article`
 -- Contraintes pour la table `commande`
 --
 ALTER TABLE `commande`
-  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id`) REFERENCES `detailcommande` (`idCommande`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id`) REFERENCES `detailcommande` (`idCommande`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `commande_ibfk_2` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `commentaire`
@@ -229,12 +238,6 @@ ALTER TABLE `note`
 ALTER TABLE `panier`
   ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `panier_ibfk_2` FOREIGN KEY (`idArticle`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id`) REFERENCES `commande` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
