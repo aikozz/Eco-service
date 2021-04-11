@@ -12,7 +12,7 @@
         $mdp = sha1($mdp);
         addUser($nom, $prenom, $email, $adresse, $mdp, $siret);
 
-        include('./vue/user/inscription.php');
+        include('./vue/inscription.php');
 
 
     }
