@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="./vue/css/style.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/Eco-service/vue/css/style.css" rel="stylesheet" type="text/css">
 
 <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html" ><img src="./vue/img/Logo.png" width="100" ></a>
+        <a class="navbar-brand" href="index.html" ><img src="http://localhost/Eco-service/vue/img/Logo.png" width="100" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i class="fa fa-navicon" style="color:#668B22; font-size:28px;"></i>
@@ -41,9 +41,9 @@
 
             <div class="form-inline my-2 my-lg-0">
                 <div class="input-group input-group-sm">
-                    <a href="#" class ="iconnav" ><img title="search" alt="search" src="./vue/img/icones/search.png" width="30px"></a> 
-                    <a href="#" class ="iconnav"><img title="panier" alt="panier" src="./vue/img/icones/panier.png" width="30px"></a> 
-                    <a href="./index.php/?controle=Page&action=connexion" class ="iconnav"><img title="profil" alt="profil" src="./vue/img/icones/profil.png" width="30px"></a> 
+                    <a href="#" class ="iconnav" ><img title="search" alt="search" src="http://localhost/Eco-service/vue/img/icones/search.png" width="30px"></a> 
+                    <a href="#" class ="iconnav"><img title="panier" alt="panier" src="http://localhost/Eco-service/vue/img/icones/panier.png" width="30px"></a> 
+                    <a href="./index.php/?controle=Page&action=connexion" class ="iconnav"><img title="profil" alt="profil" src="http://localhost/Eco-service/vue/img/icones/profil.png" width="30px"></a> 
 
 
                 </div>
