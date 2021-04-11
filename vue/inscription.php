@@ -1,5 +1,5 @@
 
-<?php include('./vue/header.php'); ?>
+<?php include_once('./vue/header.php'); ?>
 <!-- Fin du Header -->
 
 
@@ -15,19 +15,19 @@
         <div class="row text-center logSignForm">
             <div id="connexionForm" style = "display:block;"  class="container w-100 col-12">
                 <form action="./index.php/?controle=connexion&action=login" method="post">
-                    <p>Email  <br><input type="text" name="email" /></p>
-                    <p>Mot de passe  <br><input type="password" name="mdp" /></p>
+                    <p>Email  <br><input type="text" name="email" required/></p>
+                    <p>Mot de passe  <br><input type="password" name="mdp" required/></p>
                     <p><input type="submit" value="Se connecter"></p>
                 </form>
             </div>
             <div id="inscriptionForm" style = "display:none;" class="container w-100 col-12">
                 <form action="./index.php/?controle=connexion&action=inscription" method="post">
-                    <p>Nom  <br><input type="text" name="nom" /></p>
-                    <p>Prénom <br><input type="text" name="prenom" /></p>
-                    <p>Adresse <br><input type="text" name="adresse" /></p>
-                    <p>Email <br><input type="text" name="email" /></p>
-                    <p>Mot de passe  <br><input  name="mdp" type="password" /></p>
-                    <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" /></p>
+                    <p>Nom  <br><input type="text" name="nom" required/></p>
+                    <p>Prénom <br><input type="text" name="prenom" required/></p>
+                    <p>Adresse <br><input type="text" name="adresse" required/></p>
+                    <p>Email <br><input type="text" name="email" required/></p>
+                    <p>Mot de passe  <br><input  name="mdp" type="password" required/></p>
+                    <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" required/></p>
                     <p>N° Siret <br> <input type="text" name="siret" /></p>
 
                     <p><input type="submit" value="S'inscrire"></p>
