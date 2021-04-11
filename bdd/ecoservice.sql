@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 11 avr. 2021 à 20:00
+-- Généré le : dim. 11 avr. 2021 à 22:24
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 7.4.16
 
@@ -29,10 +29,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
-  `prix` int(11) NOT NULL,
+  `prix` float NOT NULL,
   `img` text NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `date_ajout` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `article`
+--
+
+INSERT INTO `article` (`id`, `prix`, `img`, `description`, `date_ajout`) VALUES
+(3, 29.99, 'article1', 'Premier article qui coute 29,99', '2021-04-11 22:11:00'),
+(4, 19, 'article2', 'Deuxieme article qui coute 19,99', '2021-04-11 22:21:00'),
+(5, 99, 'article3', 'Troisieme article qui coute 99,99', '2021-04-11 22:22:00');
 
 -- --------------------------------------------------------
 
@@ -119,7 +129,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `mdp`, `adresse`, `prenom`, `nom`, `statut`, `siret`) VALUES
-(3, 'rezezrre@hotmail.com', 'bf5cc752ec79e865f373a52cccc2c0bbe0c5d6f3', '36 rue berezzerzaudin', 'rez', 'Bugarinrezre', 1, 'erzrze');
+(3, 'rezezrre@hotmail.com', 'bf5cc752ec79e865f373a52cccc2c0bbe0c5d6f3', '36 rue berezzerzaudin', 'rez', 'Bugarinrezre', 1, 'erzrze'),
+(4, 're', 'c387c982a132d05cbd5f88840aef2c8157740049', 'er', 'er', 'rere', 1, NULL),
+(5, '', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', 1, NULL);
 
 --
 -- Index pour les tables déchargées
@@ -181,7 +193,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `commande`
@@ -199,23 +211,16 @@ ALTER TABLE `commentaire`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Contraintes pour les tables déchargées
 --
 
 --
--- Contraintes pour la table `article`
---
-ALTER TABLE `article`
-  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id`) REFERENCES `detailcommande` (`idArticle`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Contraintes pour la table `commande`
 --
 ALTER TABLE `commande`
-  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id`) REFERENCES `detailcommande` (`idCommande`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `commande_ibfk_2` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -224,6 +229,12 @@ ALTER TABLE `commande`
 ALTER TABLE `commentaire`
   ADD CONSTRAINT `commentaire_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `commentaire_ibfk_2` FOREIGN KEY (`idArticle`) REFERENCES `note` (`idArticle`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `detailcommande`
+--
+ALTER TABLE `detailcommande`
+  ADD CONSTRAINT `detailcommande_ibfk_1` FOREIGN KEY (`idArticle`) REFERENCES `article` (`id`);
 
 --
 -- Contraintes pour la table `note`
@@ -236,8 +247,7 @@ ALTER TABLE `note`
 -- Contraintes pour la table `panier`
 --
 ALTER TABLE `panier`
-  ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `panier_ibfk_2` FOREIGN KEY (`idArticle`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

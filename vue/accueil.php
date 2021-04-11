@@ -1,6 +1,6 @@
 
 <!-- Header -->
-<?php require_once('./vue/header.php'); ?>
+<?php include_once('./vue/header.php'); ?>
 <!-- Fin du Header -->
 
 

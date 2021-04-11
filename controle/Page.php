@@ -7,9 +7,6 @@ function acc(){
 
 function connexion(){
 	require_once("./vue/inscription.php");
-
-
-
 }
 
 
