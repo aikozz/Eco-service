@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+
     <!-- Site meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,7 +45,7 @@
                 <div class="input-group input-group-sm">
                     <a href="#" class ="iconnav" ><img title="search" alt="search" src="./vue/img/icones/search.png" width="30px"></a> 
                     <a href="#" class ="iconnav"><img title="panier" alt="panier" src="./vue/img/icones/panier.png" width="30px"></a> 
-                    <a href="#" class ="iconnav"><img title="profil" alt="profil" src="./vue/img/icones/profil.png" width="30px"></a> 
+                    <a href="./index.php/?controle=Page&action=connexion" class ="iconnav"><img title="profil" alt="profil" src="./vue/img/icones/profil.png" width="30px"></a> 
 
 
                 </div>
@@ -56,3 +54,4 @@
         </div>
     </div>
 </nav>
+</head>

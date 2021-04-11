@@ -1,36 +1,8 @@
 
-</head>
-<body>
-<!-- Header -->
-<?php require_once('./vue/header.php'); ?>
+<?php include('./vue/header.php'); ?>
 <!-- Fin du Header -->
 
-<script>
 
-function showConnexion() {
-    var selectConnexion = document.getElementById('selectConnexion');
-    var connexionForm = document.getElementById("connexionForm");
-    var inscriptionForm = document.getElementById("inscriptionForm");
-
-    inscriptionForm.style.display = "none";
-    connexionForm.style.display = "block";
-    selectConnexion.style.fontWeight="bold";
-    selectInscription.style.fontWeight="normal";
-}
-function showInscription() {
-    var selectInscription = document.getElementById('selectInscription');
-
-    var connexionForm = document.getElementById("connexionForm");
-    var inscriptionForm = document.getElementById("inscriptionForm");
-
-    selectInscription.style.fontWeight="bold"
-    selectConnexion.style.fontWeight="normal";
-
-    inscriptionForm.style.display = "block";
-    connexionForm.style.display = "none";
-  
-}
-</script>
 <section class=" testici  container w-100 divBoxLog col-lg-4 col-10  ">
     <div class="row chooseLog">
             <a class="col-5-5 text-center justify-content-around itemConnec" id="selectConnexion" onclick="showConnexion()">CONNEXION </a>
@@ -77,9 +49,32 @@ function showInscription() {
 <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" type="text/javascript"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script>
 
-</body>
-</html>
+function showConnexion() {
+    var selectConnexion = document.getElementById('selectConnexion');
+    var connexionForm = document.getElementById("connexionForm");
+    var inscriptionForm = document.getElementById("inscriptionForm");
+
+    inscriptionForm.style.display = "none";
+    connexionForm.style.display = "block";
+    selectConnexion.style.fontWeight="bold";
+    selectInscription.style.fontWeight="normal";
+}
+function showInscription() {
+    var selectInscription = document.getElementById('selectInscription');
+
+    var connexionForm = document.getElementById("connexionForm");
+    var inscriptionForm = document.getElementById("inscriptionForm");
+
+    selectInscription.style.fontWeight="bold"
+    selectConnexion.style.fontWeight="normal";
+
+    inscriptionForm.style.display = "block";
+    connexionForm.style.display = "none";
+  
+}
+</script>
 
 
 
