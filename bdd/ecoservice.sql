@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 11 avr. 2021 à 22:24
+-- Généré le : dim. 11 avr. 2021 à 22:35
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 7.4.16
 
@@ -32,6 +32,7 @@ CREATE TABLE `article` (
   `prix` float NOT NULL,
   `img` text NOT NULL,
   `description` text NOT NULL,
+  `categoriearticle` text NOT NULL,
   `date_ajout` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,10 +40,10 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id`, `prix`, `img`, `description`, `date_ajout`) VALUES
-(3, 29.99, 'article1', 'Premier article qui coute 29,99', '2021-04-11 22:11:00'),
-(4, 19, 'article2', 'Deuxieme article qui coute 19,99', '2021-04-11 22:21:00'),
-(5, 99, 'article3', 'Troisieme article qui coute 99,99', '2021-04-11 22:22:00');
+INSERT INTO `article` (`id`, `prix`, `img`, `description`, `categoriearticle`, `date_ajout`) VALUES
+(3, 29.99, 'article1', 'Premier article qui coute 29,99', '', '2021-04-11 22:11:00'),
+(4, 19, 'article2', 'Deuxieme article qui coute 19,99', '', '2021-04-11 22:21:00'),
+(5, 99, 'article3', 'Troisieme article qui coute 99,99', '', '2021-04-11 22:22:00');
 
 -- --------------------------------------------------------
 
