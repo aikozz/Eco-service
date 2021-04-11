@@ -55,27 +55,29 @@ function showInscription() {
             <a class=" col-5-5 text-center justify-content-around itemConnec" id="selectInscription"onclick="showInscription()">INSCRIPTION</a>
         
     </div>
-    <div class="row text-center logSignForm">
-        <div id="connexionForm" style = "display:block;" class="container w-100 col-12">
-            <form action="#" method="post">
-                <p>Email  <br><input type="text" name="nom" /></p>
-                <p>Mot de passe  <br><input type="text" name="age" /></p>
-                <p><input type="submit" value="Se connecter"></p>
-            </form>
-        </div>
-        <div id="inscriptionForm" style = "display:none;" class="container w-100 col-12">
-            <form action="./index.php/?controle=connexion&action=inscription" method="post">
-                <p>Nom  <br><input type="text" name="nom" /></p>
-                <p>Prénom <br><input type="text" name="prenom" /></p>
-                <p>Adresse <br><input type="text" name="adresse" /></p>
-                <p>Email <br><input type="text" name="email" /></p>
-                <p>Mot de passe  <br><input  name="mdp" type="password" /></p>
-                <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" /></p>
-                <p>N° Siret <br> <input type="text" name="siret" /></p>
+    <div class="rectangle">
+        <div class="row text-center logSignForm">
+            <div id="connexionForm" style = "display:block;"  class="container w-100 col-12">
+                <form action="./index.php/?controle=connexion&action=login" method="post">
+                    <p>Email  <br><input type="text" name="email" /></p>
+                    <p>Mot de passe  <br><input type="password" name="mdp" /></p>
+                    <p><input type="submit" value="Se connecter"></p>
+                </form>
+            </div>
+            <div id="inscriptionForm" style = "display:none;" class="container w-100 col-12">
+                <form action="./index.php/?controle=connexion&action=inscription" method="post">
+                    <p>Nom  <br><input type="text" name="nom" /></p>
+                    <p>Prénom <br><input type="text" name="prenom" /></p>
+                    <p>Adresse <br><input type="text" name="adresse" /></p>
+                    <p>Email <br><input type="text" name="email" /></p>
+                    <p>Mot de passe  <br><input  name="mdp" type="password" /></p>
+                    <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" /></p>
+                    <p>N° Siret <br> <input type="text" name="siret" /></p>
 
-                <p><input type="submit" value="S'inscrire"></p>
-            </form>
-        </div>              
+                    <p><input type="submit" value="S'inscrire"></p>
+                </form>
+            </div>              
+        </div>
     </div>
 </section>
 

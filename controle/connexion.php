@@ -14,5 +14,13 @@
 
         include('./vue/user/inscription.php');
 
+
+    }
+
+    function login(){
+        include('./modele/user.php');
+        $mdp = $_POST['mdp'];
+        $email = $_POST['email'];
+        
     }
 ?>

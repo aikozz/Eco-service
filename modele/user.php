@@ -12,3 +12,11 @@
 
 
 }
+
+  function login($email,$mdp){
+    include('connexion.php');
+    $sql = "SELECT email, mdp from USER WHERE email = '$email' AND mdp = '$mdp'";
+
+    
+
+  }
