@@ -21,6 +21,8 @@
         include('./modele/user.php');
         $mdp = $_POST['mdp'];
         $email = $_POST['email'];
-        
+        $mdp = sha1($mdp);
+       
+        login_user($email,$mdp); 
     }
 ?>

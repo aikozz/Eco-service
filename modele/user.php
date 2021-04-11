@@ -13,10 +13,16 @@
 
 }
 
-  function login($email,$mdp){
+  function login_user($email,$mdp){
     include('connexion.php');
-    $sql = "SELECT email, mdp from USER WHERE email = '$email' AND mdp = '$mdp'";
+      $sql = "SELECT email, mdp from USER WHERE email = '$email' AND mdp = '$mdp'";
+      $pdo = $pdo->prepare($sql);
+      
+      $pdo->execute();
 
-    
+      $result = $pdo->fetch();
+    var_dump($result); die;
+
+
 
   }
