@@ -27,7 +27,7 @@
                 
                 
                 <li class="nav-item col-4">
-                    <a class="nav-link" href="product.html">Produits</a>
+                    <a class="nav-link" href="./index.php/?controle=Page&action=allProducts">Produits</a>
                 </li>
                 <li class="nav-item col-4">
                     <a class="nav-link" href="product.html">Services</a>
