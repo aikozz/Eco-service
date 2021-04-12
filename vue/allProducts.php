@@ -3,9 +3,11 @@
 <!-- Fin du Header -->
 <section class="jumbotron  ">
     <div class="container">
-        <h1 class="jumbotron-heading DecouvrezNosProduits text-center" >Decouvrez nos produits </h1>
-        <a class="text-left" id="nouveautesProduits" onclick="showNouveautes()">Nouveautés </a>
-        <a class="text-left" id="toutProduits" onclick="showAllProduits()">Tous les produits </a>
+        <h1 class="jumbotron-heading DecouvrezNosProduits text-center" >Decouvrez nos produits </h1></br>
+        <div >
+            <a class="text-left" id="nouveautesProduits" onclick="showNouveautes()">Nouveautés </a>
+            <a class="text-left" id="toutProduits" onclick="showAllProduits()">Tous les produits </a>
+        </div>
     </div>
 </section>
 
@@ -85,6 +87,10 @@
     allArticles.style.display = "none";
     newArticles.style.display = "block";
     buttonNouveauteProduit.style.fontWeight="bold";
+    buttonNouveauteProduit.style.textDecoration="underline";
+    buttonNouveauteProduit.style.textDecorationColor="#668B22";
+    buttonToutProduits.style.textDecoration="none";
+
     buttonToutProduits.style.fontWeight="normal";
 }
 function showAllProduits() {
@@ -98,6 +104,10 @@ function showAllProduits() {
     newArticles.style.display = "none";
     buttonNouveauteProduit.style.fontWeight="normal";
     buttonToutProduits.style.fontWeight="bold";
+    buttonToutProduits.style.textDecoration="underline";
+    buttonToutProduits.style.textDecorationColor="#668B22";
+    buttonNouveauteProduit.style.textDecoration="none";
+
 }
 
 </script>

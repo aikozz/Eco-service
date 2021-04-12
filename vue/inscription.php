@@ -29,7 +29,6 @@
                     <p>Mot de passe  <br><input  name="mdp" type="password" required/></p>
                     <p>Confirmez votre mot de passe  <br><input type="password" name="confirmPass" required/></p>
                     <p>N° Siret <br> <input type="text" name="siret" /></p>
-
                     <p><input type="submit" value="S'inscrire"></p>
                 </form>
             </div>              

@@ -24,7 +24,16 @@
     padding-bottom: 10px;
     padding-top: 10px;
 
-
+}
+#nouveautesProduits, #toutProduits{
+    font-size:25px;
+}
+#nouveautesProduits{
+    font-weight: bold;
+    margin-right:10px;
+    text-decoration: underline;
+    text-decoration-color: #668B22;
+  
 }
 .bloc_left_price {
     color: #c01508;
