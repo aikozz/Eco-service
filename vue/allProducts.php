@@ -28,7 +28,7 @@
                 <div class="row w-100 col-6"> 
                    
                     <div class="col-11 articleProducts text-center">
-                        <img src ="../vue/img/articleImg/<?php echo $result['img'] ?>.jpg" class="img-fluid rounded " width="90%">
+                        <img src ="http://localhost/Eco-service/vue/img/articleImg/<?php echo $result['img'] ?>.jpg" class="img-fluid rounded " width="90%">
                         <p> Catégorie :  <?php echo $result['categoriearticle'] ; ?></p>
                         <p> Prix :  <?php echo $result['prix'] ; ?></p>
                         <button> Ajouter au panier</button>
@@ -53,7 +53,7 @@
                     <div class="row w-100 col-6"> 
                     
                         <div class="col-11 articleProducts text-center">
-                            <img src ="../vue/img/articleImg/<?php echo $result['img'] ?>.jpg" class="img-fluid rounded " width="90%">
+                            <img src ="http://localhost/Eco-service/vue/img/articleImg/<?php echo $result['img'] ?>.jpg" class="img-fluid rounded " width="90%">
                             <p> Catégorie :  <?php echo $result['categoriearticle'] ; ?></p>
                             <p> Prix :  <?php echo $result['prix'] ; ?></p>
                             <button> Ajouter au panier</button>

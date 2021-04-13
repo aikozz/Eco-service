@@ -13,5 +13,8 @@ function allProducts(){
 	require_once("./vue/allProducts.php");
 }
 
+function services(){
+	require_once("./vue/services.php");
+}
 
 ?>
