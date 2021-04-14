@@ -13,7 +13,8 @@ function connexion(){
 
 function allProducts(){
 	include("./modele/article.php");
-	$results = getAllArticles();
+	$results = getAllArticlesByDate();
+	$res = getAllArticles();
 	require_once("./vue/allProducts.php");
 	
 }

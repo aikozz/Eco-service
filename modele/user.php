@@ -21,5 +21,5 @@
       $pdo->execute();
 
       $result = $pdo->fetch();
-    var_dump($result); die;
+      return $result;
   }

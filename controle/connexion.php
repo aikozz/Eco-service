@@ -23,6 +23,15 @@
         $email = $_POST['email'];
         $mdp = sha1($mdp);
        
-        login_user($email,$mdp); 
+        $user = login_user($email,$mdp); 
+        if(!empty($user)){
+            session_start();
+            $_SESSION['user'] = $user
+        }
+        
+        include("./modele/article.php");
+        $results = getAllArticles();
+        require("./vue/accueil.php");
+
     }
 ?>
