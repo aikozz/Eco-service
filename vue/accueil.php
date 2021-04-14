@@ -75,14 +75,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                    <?php include('./modele/connexion.php');
-                $sql = "SELECT * FROM article  ORDER BY date_ajout DESC";
-                $pdo = $pdo->prepare($sql);
-        
-            $pdo->execute();
-
-            while($result = $pdo->fetch())
-            {  ?>
+                        <?php foreach($results as $result): ?>
                         <div class="col-sm">
                             <div class="card">
                                 <img class="card-img-top" src ="http://localhost/Eco-service/vue/img/articleImg/<?php echo $result['img'] ?>.jpg" class="img-fluid rounded " alt="Card image cap">
@@ -100,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                         <?php }?> 
+                         <?php endforeach;?> 
                         
                         
                     </div>

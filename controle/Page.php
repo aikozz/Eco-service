@@ -1,6 +1,8 @@
 <?php
 
 function acc(){
+	include("./modele/article.php");
+	$results = getAllArticles();
 	require("./vue/accueil.php");
 	
 }
