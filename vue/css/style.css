@@ -111,7 +111,23 @@ html {
     font-family: "Open sans", Helvetica, Arial;
     font-weight: 300;
 }
+h5{
+    font-family: 'Rock Salt';
 
+}
+.item-card{
+    height:300px;
+    background-color:#668B22;
+
+}
+.bg-color2{
+    background-color:#898949;
+
+}
+.item-card2{
+    height:300px;
+    background-color:#898949;
+}
 #selectConnexion {
     font-family: 'Rock Salt';
     font-size: 15px;
