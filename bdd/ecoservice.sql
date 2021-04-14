@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 11 avr. 2021 à 22:35
+-- Généré le : mer. 14 avr. 2021 à 16:22
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 7.4.16
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
+  `titre_article` text NOT NULL,
   `prix` float NOT NULL,
   `img` text NOT NULL,
   `description` text NOT NULL,
@@ -40,10 +41,10 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id`, `prix`, `img`, `description`, `categoriearticle`, `date_ajout`) VALUES
-(3, 29.99, 'article1', 'Premier article qui coute 29,99', '', '2021-04-11 22:11:00'),
-(4, 19, 'article2', 'Deuxieme article qui coute 19,99', '', '2021-04-11 22:21:00'),
-(5, 99, 'article3', 'Troisieme article qui coute 99,99', '', '2021-04-11 22:22:00');
+INSERT INTO `article` (`id`, `titre_article`, `prix`, `img`, `description`, `categoriearticle`, `date_ajout`) VALUES
+(3, 'Shampoing au œufs', 29.99, 'article1', 'Premier article qui coute 29,99', 'Shampoing', '2021-04-11 22:11:00'),
+(4, 'Sac à main eco-responsable', 19, 'article2', 'Deuxieme article qui coute 19,99', 'Sac', '2021-04-11 22:21:00'),
+(5, 'Bouteille recyclée', 99, 'article3', 'Troisieme article qui coute 99,99', 'Bouteille', '2021-04-11 22:22:00');
 
 -- --------------------------------------------------------
 
