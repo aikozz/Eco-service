@@ -41,15 +41,9 @@
         <div id="newArticles">
             <div class="row" action="./index.php/?modele=article&action=getAllArticles">
 
-                <?php include('./modele/connexion.php');
-                $sql = "SELECT * FROM article  ORDER BY date_ajout DESC";
-                $pdo = $pdo->prepare($sql);
-            
-                $pdo->execute();
+           
 
-                while($result = $pdo->fetch())
-                {  
-                ?>
+              <?php foreach($results as $result):?>
                     <div class="row w-100 col-6"> 
                     
                         <div class="col-11 articleProducts text-center">
@@ -60,7 +54,7 @@
                         </div>
         
                     </div>  
-                <?php }?>
+                <?php endforeach;?>
             </div>
         </div>
     </div>

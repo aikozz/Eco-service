@@ -22,7 +22,4 @@
 
       $result = $pdo->fetch();
     var_dump($result); die;
-
-
-
   }

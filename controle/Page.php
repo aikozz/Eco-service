@@ -10,7 +10,10 @@ function connexion(){
 }
 
 function allProducts(){
+	include("./modele/article.php");
+	$results = getAllArticles();
 	require_once("./vue/allProducts.php");
+	
 }
 
 function services(){
