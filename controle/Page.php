@@ -11,6 +11,13 @@ function connexion(){
 	require_once("./vue/inscription.php");
 }
 
+function profil(){
+	/*include("./modele/profil.php");
+	$commandes = getAllCommandes($_SESSION['user']);*/
+	require("./vue/profil.php");
+
+}
+
 function allProducts(){
 	include("./modele/article.php");
 	$results = getAllArticlesByDate();

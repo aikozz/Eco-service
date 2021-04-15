@@ -25,8 +25,11 @@
        
         $user = login_user($email,$mdp); 
         if(!empty($user)){
-            session_start();
-            $_SESSION['user'] = $user
+            if((!isset($_SESSION['user']))){
+                session_start();
+            }
+            
+            $_SESSION['user'] = $user;
         }
         
         include("./modele/article.php");

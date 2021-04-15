@@ -3,15 +3,16 @@
   function addUser($nom,$prenom,$email,$adresse,$mdp,$siret){
     include('connexion.php');
 
-    if(empty($siret))
+    if(empty($siret)){
         $sql = "INSERT INTO USER (email, mdp, adresse, prenom, nom, statut) VALUES ('$email', '$mdp', '$adresse', '$prenom', '$nom', '1')";
-    else
+    }
+    else{
         $sql = "INSERT INTO USER (email, mdp, adresse, prenom, nom, statut, siret) VALUES ('$email', '$mdp', '$adresse', '$prenom', '$nom', '1', '$siret')";
-        $test = $pdo->exec($sql);
-   
+    }
 
-
-}
+    $pdo = $pdo->prepare($sql);
+    $pdo->execute();
+  }
 
   function login_user($email,$mdp){
     include('connexion.php');

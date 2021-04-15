@@ -50,9 +50,11 @@
                 <div class="input-group input-group-sm">
                     <a href="#" class ="iconnav" ><img title="search" alt="search" src="http://localhost/Eco-service/vue/img/icones/search.png" width="30px"></a> 
                     <a href="#" class ="iconnav"><img title="panier" alt="panier" src="http://localhost/Eco-service/vue/img/icones/panier.png" width="30px"></a> 
+                    <?php if(!empty($user)) : ?>
                     <a href="./index.php/?controle=Page&action=connexion" class ="iconnav"><img title="profil" alt="profil" src="http://localhost/Eco-service/vue/img/icones/profil.png" width="30px"></a> 
-
-
+                    <?php else : ?>
+                    <a href="./index.php/?controle=Page&action=profil" class ="iconnav"><img title="profil" alt="profil" src="http://localhost/Eco-service/vue/img/icones/profil.png" width="30px"></a> 
+                    <?php endif; ?>
                 </div>
                 
             </div>
