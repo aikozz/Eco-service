@@ -374,3 +374,38 @@ footer a {
 .vosCommandes .gris{
     background-color: #C4C4C4;
 }
+
+.contact p{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    line-height: 35px;
+    margin-left: 163px;
+}
+
+.contact input{
+    width: 1600px;
+    height: 81px;
+    background: rgba(196, 196, 196, 0.17);
+    font-size: 30px;
+    font-family: 'Roboto';
+    border: 5px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-left: 163px;
+}
+
+.contact .msg{
+    height: 448px;
+}
+
+.contact .submit{
+    margin-top: 3%;
+    background: #668B22;
+    border-radius: 20px;
+    width: 394px;
+    height: 82px;
+    color: white;
+    margin-left: 1375px;
+    border-color: white;
+}

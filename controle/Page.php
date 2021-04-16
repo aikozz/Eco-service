@@ -30,4 +30,8 @@ function services(){
 	require_once("./vue/services.php");
 }
 
+function contact(){
+	require("./vue/contact.php");
+}
+
 ?>
